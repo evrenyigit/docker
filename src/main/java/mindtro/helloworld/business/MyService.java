@@ -9,7 +9,7 @@ public class MyService {
 
     @LogAspect
     public String doSomething(String param){
-        System.out.println("doing something..." + param );
+        System.out.println("doing something... " + param );
         return param;
     }
 }
