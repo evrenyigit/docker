@@ -2,10 +2,8 @@ package mindtro.helloworld.api;
 
 import mindtro.helloworld.business.InvoiceDetailService;
 import mindtro.helloworld.core.utilities.Result;
-import mindtro.helloworld.core.utilities.SuccessResult;
 import mindtro.helloworld.entity.InvoiceDetail;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
