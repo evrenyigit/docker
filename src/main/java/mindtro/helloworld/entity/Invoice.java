@@ -1,6 +1,7 @@
 package mindtro.helloworld.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -20,6 +21,7 @@ public class Invoice {
     @Column(name = "invoice_date")
     private Date invoiceDate;
 
+    @Size(min=30)
     @Column(name = "type_of_invoice")
     private String typeOfInvoice;
 

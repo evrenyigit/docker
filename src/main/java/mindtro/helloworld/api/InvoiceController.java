@@ -1,5 +1,6 @@
 package mindtro.helloworld.api;
 
+import jakarta.validation.Valid;
 import mindtro.helloworld.business.InvoiceService;
 import mindtro.helloworld.entity.Customer;
 import mindtro.helloworld.entity.Invoice;
@@ -18,7 +19,7 @@ public class InvoiceController {
     InvoiceService invoiceService;
 
     @PostMapping("/add")
-    public ResponseEntity<?> add(@RequestBody Invoice invoice){
+    public ResponseEntity<?> add(@Valid @RequestBody Invoice invoice){
         return ResponseEntity.ok().body(invoiceService.add(invoice));
     }
 }
