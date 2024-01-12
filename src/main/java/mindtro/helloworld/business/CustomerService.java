@@ -1,5 +1,10 @@
 package mindtro.helloworld.business;
 
+import mindtro.helloworld.core.exceptions.MyException;
+import mindtro.helloworld.core.utilities.DataResult;
+import mindtro.helloworld.core.utilities.Result;
+import mindtro.helloworld.core.utilities.SuccessDataResult;
+import mindtro.helloworld.core.utilities.SuccessResult;
 import mindtro.helloworld.dataAccess.CustomerRepository;
 import mindtro.helloworld.entity.Customer;
 import mindtro.helloworld.entity.Invoice;
@@ -13,6 +18,12 @@ public class CustomerService {
 
     public Customer add(Customer customer){
         return customerRepository.save(customer);
+    }
+
+    public DataResult<Customer> findById(Integer id) throws MyException{
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new MyException());
+        return new SuccessDataResult("Data listelendi");
     }
 
 }

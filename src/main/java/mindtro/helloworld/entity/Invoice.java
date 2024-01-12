@@ -21,7 +21,6 @@ public class Invoice {
     @Column(name = "invoice_date")
     private Date invoiceDate;
 
-    @Size(min=30)
     @Column(name = "type_of_invoice")
     private String typeOfInvoice;
 
@@ -31,6 +30,20 @@ public class Invoice {
     @ManyToOne
     @JoinColumn(name="customer_id")
     private Customer customer;
+
+    /*
+    bu kısım olmalı mı ?
+
+    private Long faturaNo;
+
+    private String scenerio;
+
+    irsaliye varsa ? yukardakileri notnull yapıp bunu null yapabilirsin
+
+
+
+
+     */
 
 //    @OneToMany(mappedBy = "invoice")
 //    List<InvoiceDetail> invoiceDetailList;

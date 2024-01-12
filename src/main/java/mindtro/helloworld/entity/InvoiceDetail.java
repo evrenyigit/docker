@@ -13,28 +13,28 @@ public class InvoiceDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
 
     @Column(name = "product_name")
     private String productName;
 
     @Column(name = "quantity")
-    private String quantity;
+    private Integer quantity;
 
     @Column(name = "unit")
-    private Integer unit;
+    private String unit;
 
     @Column(name = "unit_price")
     private BigDecimal unitPrice;
 
     @Column(name = "tax_rate")
-    private double taxRate;
+    private BigDecimal taxRate;
 
     @Column(name = "discount")
     private BigDecimal discount;
 
     @Column(name = "discount_rate")
-    private double discountRate;
+    private BigDecimal discountRate;
 
     @Column(name = "amount")
     private BigDecimal amount;

@@ -19,7 +19,7 @@ public class InvoiceController {
     InvoiceService invoiceService;
 
     @PostMapping("/add")
-    public ResponseEntity<?> add(@Valid @RequestBody Invoice invoice){
+    public ResponseEntity<?> add(@RequestBody Invoice invoice){
         return ResponseEntity.ok().body(invoiceService.add(invoice));
     }
 }

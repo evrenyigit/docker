@@ -21,8 +21,6 @@ public class Customer {
     @Column(name="id")
     private Long id;
 
-    //@NotNull bunlar niye çalışmadı
-    //@Size(min = 2, max = 5,message = "isim çok uzun")
     @Column(name="name")
     private String name;
 
@@ -30,8 +28,8 @@ public class Customer {
     @Column(name="email")
     private String email;
 
-//    @OneToMany(mappedBy = "customer")
-//    private List<Invoice> invoiceList;
+//  @OneToMany(mappedBy = "customer")
+//  private List<Invoice> invoiceList;
 
 
 }

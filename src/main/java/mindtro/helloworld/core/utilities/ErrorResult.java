@@ -8,9 +8,8 @@ public class ErrorResult extends Result{
         super(false);
     }
 
-    public ErrorResult(Exception exception){
-        super(false);
-        this.exception = exception;
+    public ErrorResult(String message){
+        super(false,message);
     }
 
 }
