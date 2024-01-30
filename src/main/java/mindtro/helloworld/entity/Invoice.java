@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
@@ -11,6 +14,8 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "invoices")
+@XmlRootElement(name = "Invoice")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Invoice {
 
     @Id

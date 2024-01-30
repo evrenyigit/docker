@@ -6,7 +6,6 @@ import java.io.File;
 public class UblValidation {
 
 
-
 //    Validator schematronValidator = new SchematronValidator(new File("UBLValidation.sch"));
 //    boolean isValid = schematronValidator.validate(unmarshalledInvoice);
 }

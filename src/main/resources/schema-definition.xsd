@@ -1,0 +1,21 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:byte" name="id"/>
+        <xs:element type="xs:dateTime" name="invoiceDate"/>
+        <xs:element type="xs:string" name="typeOfInvoice"/>
+        <xs:element type="xs:float" name="totalAmount"/>
+        <xs:element name="customer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="email"/>
+              <xs:element type="xs:byte" name="id"/>
+              <xs:element type="xs:string" name="name"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

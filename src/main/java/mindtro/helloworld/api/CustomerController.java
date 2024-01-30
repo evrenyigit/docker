@@ -1,5 +1,6 @@
 package mindtro.helloworld.api;
 
+import jakarta.validation.Valid;
 import mindtro.helloworld.business.CustomerService;
 import mindtro.helloworld.core.exceptions.MyException;
 import mindtro.helloworld.core.utilities.DataResult;

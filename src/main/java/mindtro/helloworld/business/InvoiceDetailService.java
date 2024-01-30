@@ -8,7 +8,10 @@ import mindtro.helloworld.entity.Invoice;
 import mindtro.helloworld.entity.InvoiceDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.xml.sax.SAXException;
 
+import javax.xml.bind.JAXBException;
+import java.io.IOException;
 import java.math.BigDecimal;
 
 @Service
@@ -20,7 +23,7 @@ public class InvoiceDetailService {
     @Autowired
     private InvoiceService invoiceService;
 
-    public Result add(InvoiceDetail invoiceDetail){
+    public Result add(InvoiceDetail invoiceDetail) throws JAXBException, SAXException, IOException {
         if(invoiceDetail.getDiscount()!=null)
             invoiceDetail.setDiscountRate(invoiceDetail.getDiscount().multiply(BigDecimal.valueOf(100)).divide(invoiceDetail.getUnitPrice()));
         else if (invoiceDetail.getDiscount()==null && invoiceDetail.getDiscountRate()!=null)
